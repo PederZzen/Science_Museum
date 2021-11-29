@@ -1,0 +1,18 @@
+
+
+.top_nav {
+    display: none; 
+}
+
+#hamburger-menu     {
+    display: none; 
+}
+
+#hamburger-menu:checked ~ nav {
+    display: block;  
+}
+
+label[for=hamburger-menu] { 
+    position: absolute;
+    top: 50px;
+}
