@@ -18,13 +18,26 @@ body {
     background-color: var(--whiteclr);
     font-family: var(--typefont);
     min-width: 300px;
+    font-size: 14px;
 }
 
 h1,
 h2,
 h3 {
     font-family: var(--headerfont);
+    font-weight: normal;
 }
+
+h1 {
+    font-size: 25px;
+}
+
+p,
+li {
+    line-height: 150%;
+    letter-spacing: 0.05em;
+}
+
 
 /* Mobile */
 
@@ -51,11 +64,11 @@ label[for=hamburger-menu] {
 .topnav ul {
     position: absolute;
     right: 0px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .topnav li {
-    padding: 20px;
+    padding: 20px 60px 20px 10px;
     list-style-type: none;
 }
 
@@ -63,40 +76,110 @@ label[for=hamburger-menu] {
 .topnav a {
     text-decoration: none;
     text-transform: capitalize;
-    color:var(--mainclr)
+    color: var(--mainclr)
+}
+
+header {
+    background-image: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
 }
 
 
-/* Main Page */
+/* Index Page */
 
 .index{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../media/img/scientific-2040795_1280_small.jpg);
+    background-image: url(../media/img/robot-small.jpg);
     background-repeat: no-repeat;
-    background-position-x: left;
+    background-position: top right;
+    background-size: cover;
     background-attachment: fixed;
 }
 
-.index h1 {
+.index_content h1 {
     color: var(--secondclr);
     text-transform: capitalize;
 }
 
-.index h2 {
+.index_content h2 {
     color: var(--mainclr);
     text-transform: uppercase;
-    margin-left: 30px;
+    font-size: 30px;
 }
 
-.index p {
+.index_content p {
     color: var(--secondclr);
+    max-width: 400px;
 }
 
-.index > main {
+.index_content h2,
+.index_content p {
+    margin-left: 20px;
+}
+
+.index_content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-top: 350px;
+    margin-left: 10%;
+}
+
+#btn-index {
+    color: var(--secondclr);
+    background-color: var(--mainclr);
+    width: 120px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 3px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 200px;
+    background-color: var(--blackclr);
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    position: relative;
-    top: 150px;
+    color: var(--secondclr);
+    text-transform: capitalize;
+}
+
+footer hr {
+    width: 60%;
+    margin: 0 auto;
+    border: none;
+    height: 1px;
+    background-color: var(--secondclr);
+}
+
+.fab {
+    font-size: 25px;
+    padding: 0 10px;
+} 
+
+footer div {
+    padding: 50px 0;
 
 }
+
+footer div p:first-of-type {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.footer-nav a {
+    color: var(--secondclr);
+    text-decoration: none;
+}
+
+.footer-nav li {
+    padding: 10px 0;
+}
+
+
+
+
+
