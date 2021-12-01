@@ -79,15 +79,11 @@ label[for=hamburger-menu] {
     color: var(--mainclr)
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
-    height: 100px;
-}
-
 
 /* Index Page */
 
-.index{
+ .index{
+     /* background: linear-gradient(to top, black, transparent), url(../media/img/robot-small.jpg); */
     background-image: url(../media/img/robot-small.jpg);
     background-repeat: no-repeat;
     background-position: top right;
@@ -95,9 +91,8 @@ header {
     background-attachment: fixed;
 }
 
+
 .index_content {
-    display: flex;
-    flex-direction: column;
     padding-top: 350px;
     margin-left: 10%;
     height: 100%;
@@ -106,6 +101,7 @@ header {
 .index_content h1 {
     color: var(--secondclr);
     text-transform: capitalize;
+    text-shadow: 0px 0px 20px #FFFFFF;
 }
 
 .index_content h2 {
@@ -125,10 +121,6 @@ header {
     margin-left: 20px;
 }
 
-.index main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
-    padding-bottom: 10px;
-}
 
 #btn-index {
     color: var(--secondclr);
@@ -137,10 +129,10 @@ header {
     padding: 10px 0;
     text-decoration: none;
     text-transform: capitalize;
-    border-radius: 3px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 0px 20px var(--mainclr);
 }
 
 #btn-index:hover {
@@ -150,20 +142,23 @@ header {
 
 /* Footer */
 
-footer {
+ footer {
     background-color: var(--blackclr);
-    display: flex;
-    flex-direction: column;
     text-align: center;
     color: var(--secondclr);
     text-transform: capitalize;
+    /* border: 1px solid var(--blackclr); */
+}
+
+.gradient {
+    background: linear-gradient(to top, black, transparent);
 }
 
 footer hr {
     width: 60%;
     margin: 0 auto;
     border: none;
-    height: 1px;
+    height: 0.5px;
     background-color: var(--secondclr);
 }
 
@@ -189,7 +184,7 @@ footer div p:first-of-type {
 
 .footer-nav li {
     padding: 10px 0;
-}
+} */
 
 
 
