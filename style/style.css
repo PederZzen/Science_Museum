@@ -203,23 +203,44 @@ label[for=hamburger-menu] {
 }
 
 .cards {
-    margin: 40px 5px 10px;
+    margin: 40px 10px 10px;
     position: relative;
 }
 
 .cards h2 {
     font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.cards h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 32px;
-    height: 2px;
-    width: 50%;
-    background: var(--mainclr);
+.cards h3 {
+    font-size: 18px;
+    padding: 10px 0;
+    max-width: 250px;
 }
+
+.cards > div {
+    position: relative;
+}
+
+.cards img {
+    
+}
+
+#date {
+    background: var(--blackclr);
+    color: var(--secondclr);
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    bottom: 150px;
+    right: 10px;
+}
+
+
 
 
 
