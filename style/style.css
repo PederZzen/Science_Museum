@@ -41,7 +41,8 @@ li {
 
 /* Mobile */
 
-/* Navigation */
+/* Header Section */
+
 
 .topnav {
     display: none; 
@@ -61,10 +62,15 @@ label[for=hamburger-menu] {
     right: 10px;
 }
 
+label[for=img] {
+    height: 500px;
+}
+
 .topnav ul {
     position: absolute;
     right: 0px;
     background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
 }
 
 .topnav li {
@@ -83,7 +89,6 @@ label[for=hamburger-menu] {
 /* Index Page */
 
  .index{
-     /* background: linear-gradient(to top, black, transparent), url(../media/img/robot-small.jpg); */
     background-image: url(../media/img/robot-small.jpg);
     background-repeat: no-repeat;
     background-position: top right;
@@ -91,9 +96,20 @@ label[for=hamburger-menu] {
     background-attachment: fixed;
 }
 
+.index main {
+    padding: 300px 0 100px;
+    background: linear-gradient(to top, black, transparent);
+
+}
+
+.index header {
+    background: linear-gradient(black, transparent);
+    height: 100px;
+
+}
+
 
 .index_content {
-    padding-top: 350px;
     margin-left: 10%;
     height: 100%;
 }
@@ -129,7 +145,7 @@ label[for=hamburger-menu] {
     padding: 10px 0;
     text-decoration: none;
     text-transform: capitalize;
-    margin: 20px auto;
+    margin: 50px auto 0;
     display: flex;
     justify-content: center;
     box-shadow: 0px 0px 20px var(--mainclr);
@@ -147,11 +163,7 @@ label[for=hamburger-menu] {
     text-align: center;
     color: var(--secondclr);
     text-transform: capitalize;
-    /* border: 1px solid var(--blackclr); */
-}
-
-.gradient {
-    background: linear-gradient(to top, black, transparent);
+    margin: -1px 0;
 }
 
 footer hr {
@@ -184,9 +196,40 @@ footer div p:first-of-type {
 
 .footer-nav li {
     padding: 10px 0;
-} */
+}
 
 
+@media screen and (min-width: 700px) {
+    
+/* Header section */
 
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 1000px;
+        text-align: center;
+ 
+    }
+
+    label[for=hamburger-menu] {
+        display: none;
+    }
+
+    .topnav {
+        display: inline-block;
+    }
+
+    .topnav ul {
+        border: none;
+        background-color: transparent;
+    }
+
+    .topnav li {
+        display: inline-block;
+    }
+
+
+}
 
 
