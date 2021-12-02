@@ -38,7 +38,11 @@ li {
     letter-spacing: 0.05em;
 }
 
-
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
 
 /* Mobile */
 
@@ -61,7 +65,6 @@ label[for=hamburger-menu] {
     position: absolute;
     top: 20px;
     right: 10px;
-    cursor: pointer;
 }
 
 
@@ -91,14 +94,14 @@ label[for=hamburger-menu] {
     background-color: var(--mainclr);
     color: var(--blackclr);
     opacity: 0.8;
-    box-shadow: 0px 0px 15px var(--mainclr);}
+}
 
 
 
 /* Index Page */
 
  .index{
-    background-image: url(../media/img/robot-small.jpg);
+    /* background-image: url(../media/img/robot-small.jpg); */
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
@@ -109,13 +112,13 @@ label[for=hamburger-menu] {
 
 .index main {
     padding: 350px 0 100px;
-    background: linear-gradient(to top, black, transparent);
+    /* background: linear-gradient(to top, black, transparent); */
 
 }
 
 .index header {
-    background: var(--blackclr); /* Fallback for old browsers */
-    background: linear-gradient(black, transparent);
+ /* Fallback for old browsers */
+    /* background: linear-gradient(black, transparent); */
     height: 100px;
 
 }
@@ -172,9 +175,6 @@ label[for=hamburger-menu] {
 /* Footer */
 
  footer {
-    background-image: linear-gradient(
-         -5deg, green, black 5%);
-
     text-align: center;
     color: var(--secondclr);
     text-transform: capitalize;
@@ -223,11 +223,6 @@ footer div p:first-of-type {
     
 /* Header section */
 
-    .logo {
-        position: absolute;
-        left: 10%;
-    }
-
     header {
         display: flex;
         flex-direction: row;
@@ -244,7 +239,6 @@ footer div p:first-of-type {
     .topnav ul {
         border: none;
         background-color: transparent;
-        margin: 30px 10% 0 0
     }
 
     .topnav li {
@@ -265,14 +259,15 @@ footer div p:first-of-type {
 /* Footer Section */
 
     footer {
-        /* display: flex; */
+        display: flex;
     }
 
 /* Index Page */
 
     .index {
-        background-image: url(../media/img/robot.jpg);
-        background-position: top left;
+        background-image: linear-gradient(-3deg, green, black 3%, black, transparent 95%, black), url(../media/img/robot.jpg);
+        background-position: left;
+        background-attachment: scroll;
     }
 
     .index main {
