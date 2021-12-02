@@ -21,6 +21,10 @@ body {
     font-size: 14px;
 }
 
+img {
+    max-width: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -71,6 +75,7 @@ label[for=hamburger-menu] {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
     overflow: hidden;
+    z-index: 100;
 }
 
 .topnav li {
@@ -105,8 +110,6 @@ label[for=hamburger-menu] {
     background-attachment: fixed;
 }
 
-
-
 .index main {
     padding: 350px 0 100px;
     background: linear-gradient(to top, black, transparent);
@@ -117,11 +120,10 @@ label[for=hamburger-menu] {
     background: var(--blackclr); /* Fallback for old browsers */
     background: linear-gradient(black, transparent);
     height: 100px;
-
 }
 
 .index_content {
-    margin-left: 10%;
+    margin-left: 40px;
     height: 100%;
 }
 
@@ -169,6 +171,59 @@ label[for=hamburger-menu] {
     box-shadow: 0px 0px 20px var(--mainclr);
 }
 
+/* Explore Page */
+
+.explore header {
+    background-color: var(--blackclr);
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../media/img/hero-explore-small.jpg);
+    background-size: cover;
+    background-position: top right;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+}
+
+.hero h1 {
+    color: var(--mainclr);
+    padding: 150px 0 30px;
+}
+
+.hero p {
+    color: white;
+}
+
+.hero p:last-of-type {
+    padding: 5px 0 100px;
+}
+
+.hero > * {
+    margin: 0 10px;
+}
+
+.cards {
+    margin: 40px 5px 10px;
+    position: relative;
+}
+
+.cards h2 {
+    font-size: 25px;
+}
+
+.cards h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 32px;
+    height: 2px;
+    width: 50%;
+    background: var(--mainclr);
+}
+
+
+
+
 /* Footer */
 
  footer {
@@ -215,6 +270,7 @@ footer div p:first-of-type {
 
 .footer-nav li {
     padding: 10px 0;
+    font-size: 18px;
 }
 
 
