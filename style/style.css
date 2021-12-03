@@ -207,7 +207,8 @@ label[for=hamburger-menu] {
     background-position: top right;
 }
 
-.cards {
+.cards,
+.exhibits {
     margin: 40px 10px 10px;
     position: relative;
 }
@@ -277,19 +278,20 @@ label[for=hamburger-menu] {
     margin-top: 20px;
     display: inline-block;
     position: relative;
+    font-size: 1.2em;
 }
 
 #cta-view-all {
     background-color: var(--mainclr);
     color: var(--secondclr);
     border: 1px solid var(--mainclr);
-    width: 10em;
-    padding: 10px 0;
+    width: 8em;
+    padding: 5px 0;
     text-decoration: none;
     margin: 70px auto;
     display: flex;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 /* Visit Page */
@@ -303,19 +305,50 @@ label[for=hamburger-menu] {
     background: var(--blackclr);
     color: var(--secondclr);
     margin: 50px 10px;
-    padding: 10px;
+    padding: 20px 15px;
     position: relative;
 }
 
-
 .hours-info ul {
     list-style-type: none;
+    padding: 15px 0;
 }
 
 .hours-info h2 {
     font-size: 1.8em;
 }
 
+.hours-info p {
+    padding-top: 15px;
+}
+
+.hours-info a {
+    color: var(--mainclr);
+    text-decoration: none;
+}
+
+.hours-info a:hover {
+    text-decoration: underline;
+}
+
+.visit .cards p {
+    margin: 20px 0;
+}
+
+.visit main {
+    margin-bottom: 100px;
+}
+
+/* Exhibitions Page */
+
+.exhibitions-page .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions-small.jpg);
+    background-position: top left;
+}
+
+.exhibitions-page .exhibits > div {
+    margin-bottom: 70px;
+}
 
 /* Footer */
 
