@@ -118,6 +118,7 @@ label[for=hamburger-menu] {
 
 .hero p {
     color: white;
+    max-width: 470px;
 }
 
 .hero p:last-of-type {
@@ -132,11 +133,8 @@ label[for=hamburger-menu] {
 /* Index Page */
 
  .index{
-    background-image: url(../media/img/robot-small.jpg);
-    background-repeat: no-repeat;
-    background-position: top right;
+    background: url(../media/img/robot-small.jpg) no-repeat fixed top right;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .index main {
@@ -301,7 +299,7 @@ label[for=hamburger-menu] {
     background-position: top left;
 }
 
-.hours-info {
+.info-card {
     background: var(--blackclr);
     color: var(--secondclr);
     margin: 50px 10px;
@@ -309,29 +307,41 @@ label[for=hamburger-menu] {
     position: relative;
 }
 
-.hours-info ul {
+.info-card ul {
     list-style-type: none;
     padding: 15px 0;
 }
 
-.hours-info h2 {
+.info-card h2 {
     font-size: 1.8em;
 }
 
-.hours-info p {
+.info-card p {
     padding-top: 15px;
 }
 
-.hours-info a {
+.info-card a {
     color: var(--mainclr);
     text-decoration: none;
 }
 
-.hours-info a:hover {
+.info-card a:hover {
     text-decoration: underline;
 }
 
-.visit .cards p {
+.visit .backdrop::after {
+    height: 4px;
+    bottom: -4px;
+    left:  4px;
+}
+
+.visit .backdrop::before {
+    width: 4px;
+    right: -4px;
+    top: 4px;
+}
+
+.cards p {
     margin: 20px 0;
 }
 
@@ -349,6 +359,94 @@ label[for=hamburger-menu] {
 .exhibitions-page .exhibits > div {
     margin-bottom: 70px;
 }
+
+/* Get Involved Page */
+
+.get-involved header {
+    position: relative;
+}
+
+.get-involved header::after {
+    content: '';
+    position: absolute;
+    background-color: var(--mainclr);
+    height: 20px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    transform: rotate(-1deg);
+    z-index: -1;
+}
+
+.get-involved h1 {
+    margin: 30px 0 20px 10px;
+    color: var(--blackclr);
+    padding: 0;
+}
+
+.get-involved .hero p {
+    color: var(--blackclr);
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.get-involved .hero {
+    clip-path: none;
+}
+
+.get-involved .cards > div {
+    margin-bottom: 50px;
+}
+
+/* Cosmology Exhibition Page */
+
+.cosmology .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/cosmology-thumbnail.jpg);
+    clip-path: none;
+    position: relative;
+}
+
+.cosmology .hero h1 {
+    color: var(--secondclr);
+    padding-bottom: 0;
+}
+
+.cosmology .hero p {
+    padding-bottom: 150px;
+}
+
+.cosmology .hero h2 {
+    color: var(--mainclr);
+    font-size: 2.5em;
+}
+
+.cosmology .info-card {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0;
+    padding: 0 10px;
+    border: 1px solid var(--mainclr);
+}
+
+.cosmology .info-card li {
+    padding: 5px 0;
+}
+
+.cosmology h3 {
+    font-size: 1.5em;
+    margin: 90px 0 20px;
+}
+
+.cosmology img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
 
 /* Footer */
 
@@ -399,74 +497,5 @@ footer div p:first-of-type {
     font-size: 18px;
 }
 
-
-
-@media screen and (min-width: 700px) {
-    
-/* Header section */
-
-    .logo {
-        position: absolute;
-        left: 10%;
-    }
-
-    header {
-        display: flex;
-        flex-direction: row;
-    }
-
-    label[for=hamburger-menu] {
-        display: none;
-    }
-
-    .topnav {
-        display: inline-block;
-    }
-
-    .topnav ul {
-        border: none;
-        background-color: transparent;
-        margin: 30px 10% 0 0
-    }
-
-    .topnav li {
-        display: inline-block;
-    }
-
-    .topnav a:hover {
-        background-color: transparent;
-        color: var(--secondclr);
-    }
-
-    .topnav a {
-        font-size: 1.2em;
-        padding: 0;
-        margin: 10px;
-    }
-
-/* Footer Section */
-
-    footer {
-        /* display: flex; */
-    }
-
-/* Index Page */
-
-    .index {
-        background-image: url(../media/img/robot.jpg);
-        background-position: top left;
-    }
-
-    .index main {
-        padding: 200px 0 100px;
-    }
-
-    #btn-index {
-        margin: 50px 0 50px 10%;
-    }
-
-
-
-}
 
 
