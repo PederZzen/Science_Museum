@@ -18,7 +18,7 @@ body {
     background-color: var(--whiteclr);
     font-family: var(--typefont);
     min-width: 300px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 header,
@@ -40,13 +40,17 @@ h3 {
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 1.8rem;
 }
 
 p,
 li {
     line-height: 150%;
     letter-spacing: 0.05em;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -59,8 +63,8 @@ ul {
 
 /* Header Section */
 
-header {
-    /* background-color: var(--blackclr); */
+header:not(.index header) {
+    background: black;
 }
 
 .topnav {
@@ -94,10 +98,9 @@ label[for=hamburger-menu] {
 
 
 .topnav a {
-    text-decoration: none;
     text-transform: capitalize;
     color: var(--mainclr);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 20px 60px 20px 10px;
     display: block;
 }
@@ -119,7 +122,6 @@ label[for=hamburger-menu] {
 .hero h1 {
     color: var(--mainclr);
     padding: 150px 0 30px;
-    font-size: 1.8em;
 }
 
 .hero p {
@@ -146,19 +148,17 @@ label[for=hamburger-menu] {
 
 .index main {
     padding: 350px 0 100px;
-    /* background: linear-gradient(to top, black, transparent); */
+    position: relative;
 }
 
 .index header {
-    /* background: var(--blackclr);  Fallback for old browsers */
-    /* background: linear-gradient(black, transparent); */
     height: 100px;
 }
 
-.content-container {
-    background: linear-gradient(to top, black 60%, transparent 95%, black 100%);
+.index .content-container {
+    background: linear-gradient(to top, 
+    green -5%, black 3%, black 60%, transparent 95%, black 100%);
 }
-
 
 .index_content {
     margin-left: 40px;
@@ -174,7 +174,7 @@ label[for=hamburger-menu] {
 .index_content h2 {
     color: var(--mainclr);
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 .index_content p {
@@ -194,14 +194,13 @@ label[for=hamburger-menu] {
     background-color: var(--mainclr);
     color: var(--secondclr);
     border: 1px solid var(--mainclr);
-    width: 120px;
-    padding: 10px 0;
-    text-decoration: none;
+    padding: 10px;
     text-transform: capitalize;
-    margin: 50px auto 0;
-    display: flex;
-    justify-content: center;
     box-shadow: 0px 0px 10px var(--mainclr);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #btn-index:hover {
@@ -224,12 +223,12 @@ label[for=hamburger-menu] {
 
 .cards h2,
 .exhibits h2 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 .cards h3,
 .exhibits h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 10px 0;
     max-width: 250px;
 }
@@ -248,7 +247,7 @@ label[for=hamburger-menu] {
     display: grid;
     place-content: center;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
     position: absolute;
     top: -5%;
     right: 10px;
@@ -280,14 +279,13 @@ label[for=hamburger-menu] {
 }
 
 .exhibits .backdrop {
-    text-decoration: none;
     background: var(--blackclr);
     color: var(--secondclr);
     padding: 5px 10px;
     margin-top: 20px;
     display: inline-block;
     position: relative;
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
 #cta-view-all {
@@ -296,11 +294,10 @@ label[for=hamburger-menu] {
     border: 1px solid var(--mainclr);
     width: 8em;
     padding: 5px 0;
-    text-decoration: none;
     margin: 70px auto;
     display: flex;
     justify-content: center;
-    font-size: 1.3em;
+    font-size: 1.5rem;
 }
 
 /* Visit Page */
@@ -323,7 +320,7 @@ label[for=hamburger-menu] {
 }
 
 .info-card h2 {
-    font-size: 1.8em;
+    font-size: 1.5rem;
 }
 
 .info-card p {
@@ -371,7 +368,6 @@ label[for=hamburger-menu] {
 }
 
 .exhibits a {
-    text-decoration: none;
     color: black;
 }
 
@@ -424,6 +420,7 @@ label[for=hamburger-menu] {
 .cosmology .hero h1 {
     color: var(--secondclr);
     padding-bottom: 0;
+    font-size: 1.2rem;
 }
 
 .cosmology .hero p {
@@ -432,7 +429,7 @@ label[for=hamburger-menu] {
 
 .cosmology .hero h2 {
     color: var(--mainclr);
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 .cosmology .info-card {
@@ -450,12 +447,8 @@ label[for=hamburger-menu] {
     padding: 5px 0;
 }
 
-.cosmology p {
-    margin: 10px 10px;
-}
-
 .cosmology h3 {
-    font-size: 1.5em;
+    font-size: 1.4rem;
     margin: 90px 10px 20px;
 }
 
@@ -473,14 +466,14 @@ label[for=hamburger-menu] {
 
 /* Footer */
 
- footer {
-    background-image: linear-gradient(
-         -5deg, green, black 5%);
-
+footer {
     text-align: center;
     color: var(--secondclr);
     text-transform: capitalize;
-    margin: -1px 0;
+}
+
+footer li {
+    padding: 5px 0;
 }
 
 footer hr {
@@ -492,8 +485,8 @@ footer hr {
 }
 
 .fab {
-    font-size: 25px;
-    padding: 0 10px;
+    font-size: 1.5rem;
+    padding: 0 15px;
 } 
 
 footer div {
@@ -502,13 +495,12 @@ footer div {
 }
 
 footer div p:first-of-type {
-    font-size: 18px;
-    padding-bottom: 10px;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
 }
 
 .footer-nav a {
     color: var(--secondclr);
-    text-decoration: none;
 }
 
 .footer-nav {
@@ -517,7 +509,7 @@ footer div p:first-of-type {
 
 .footer-nav li {
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -602,8 +594,10 @@ footer div p:first-of-type {
     /* Index Page */
 
     .index main {
-        padding: 200px 0 100px;
+        padding: 200px 0 120px;
     }
 
-    
+    #btn-index {
+        left: 100px;
+    }
 }
