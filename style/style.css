@@ -360,6 +360,11 @@ label[for=hamburger-menu] {
     margin-bottom: 70px;
 }
 
+.exhibits a {
+    text-decoration: none;
+    color: black;
+}
+
 /* Get Involved Page */
 
 .get-involved header {
@@ -435,18 +440,26 @@ label[for=hamburger-menu] {
     padding: 5px 0;
 }
 
-.cosmology h3 {
-    font-size: 1.5em;
-    margin: 90px 0 20px;
+.cosmology p {
+    margin: 10px 10px;
 }
 
-.cosmology img {
+.cosmology h3 {
+    font-size: 1.5em;
+    margin: 90px 10px 20px;
+}
+
+.exhibit-img {
+    margin-bottom: 30px;
+}
+
+.exhibit-img > * {
     max-height: 300px;
     width: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
+    margin: 5px 0;
 }
-
 
 /* Footer */
 
