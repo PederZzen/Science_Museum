@@ -15,8 +15,7 @@
 }
 
 body {
-    /* background-color: var(--whiteclr); */
-    background: linear-gradient( black, white 80%, black 50px);
+    background-color: var(--whiteclr);
     font-family: var(--typefont);
     min-width: 300px;
     font-size: 0.85rem;
@@ -25,7 +24,7 @@ body {
 header,
 main,
 footer {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -64,6 +63,11 @@ ul {
 /* Mobile */
 
 /* Header Section */
+
+header,
+footer {
+    background: black;
+}
 
 .topnav {
     display: none; 
@@ -207,7 +211,7 @@ label[for=hamburger-menu] {
 /* Explore Page */
 
 .explore .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../media/img/hero-explore-small.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore-small.jpg);
     background-position: top right;
 }
 
@@ -611,8 +615,6 @@ footer div p:first-of-type {
     .fab {
         padding-left: 0;
     }
-
-
 
 
     /* Index Page */
