@@ -169,6 +169,7 @@ label[for=hamburger-menu] {
     color: var(--secondclr);
     text-transform: capitalize;
     text-shadow: 0px 0px 20px #FFFFFF;
+    font-size: 1.5rem;
 }
 
 .index_content h2 {
@@ -180,7 +181,7 @@ label[for=hamburger-menu] {
 .index_content p {
     color: var(--secondclr);
     max-width: 450px;
-    margin: 0 10px;
+    margin: 10px;
     text-shadow: 0px 0px 5px #000;
 }
 
@@ -194,7 +195,7 @@ label[for=hamburger-menu] {
     background-color: var(--mainclr);
     color: var(--secondclr);
     border: 1px solid var(--mainclr);
-    padding: 10px;
+    padding: 10px 20px;
     text-transform: capitalize;
     box-shadow: 0px 0px 10px var(--mainclr);
     position: absolute;
@@ -549,6 +550,7 @@ footer div p:first-of-type {
 
     .topnav a {
         position: relative;
+        font-size: 1rem;
     }
 
     .topnav a::after {
@@ -556,7 +558,7 @@ footer div p:first-of-type {
         width: 100%;
         height: 1px;
         left: 0;
-        bottom: 0;
+        bottom: -2px;
         background: var(--mainclr);
         position: absolute;
 
@@ -591,6 +593,16 @@ footer div p:first-of-type {
         display: none;
     }
 
+    /* Footer Section */
+
+    footer {
+        /* display: flex; */
+    }
+
+    footer hr {
+        display: none;
+    }
+
     /* Index Page */
 
     .index main {
@@ -598,6 +610,12 @@ footer div p:first-of-type {
     }
 
     #btn-index {
-        left: 100px;
+        left: 110px;
+        bottom: 40px;
     }
+
+    .index_content {
+        /* margin-left: 0; */
+    }
+
 }
