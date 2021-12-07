@@ -21,11 +21,11 @@ body {
     font-size: 0.85rem;
 }
 
-header,
-main,
-footer {
+.max-width {
     max-width: 1200px;
+    position: relative;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 img {
@@ -135,14 +135,10 @@ label[for=hamburger-menu] {
     padding: 5px 0 100px;
 }
 
-.hero > * {
-    margin: 0 10px;
-}
-
 
 /* Index Page */
 
- .index{
+.index{
     background: url(../media/img/robot.jpg) no-repeat fixed 50% 20%;
     background-size: cover;
 
@@ -211,14 +207,13 @@ label[for=hamburger-menu] {
 /* Explore Page */
 
 .explore .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore-small.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore.jpg);
     background-position: top right;
 }
 
 .cards,
 .exhibits {
-    margin: 40px 10px 10px;
-    position: relative;
+    margin-top: 40px;
 }
 
 .cards h2,
@@ -572,7 +567,6 @@ footer div p:first-of-type {
         position: absolute;
         right: 0;
         top: 10px;
-        font-size: 0.8rem;
     }
 
     #logo {
@@ -636,4 +630,11 @@ footer div p:first-of-type {
     .index_content {
         margin-left: 0;
     }
+
+    /* Explore Page */
+
+    .cards img {
+        max-width: 400px;
+    }
+
 }
