@@ -15,10 +15,11 @@
 }
 
 body {
-    background-color: var(--whiteclr);
+    /* background-color: var(--whiteclr); */
+    background: linear-gradient( black, white 80%, black 50px);
     font-family: var(--typefont);
     min-width: 300px;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 header,
@@ -59,13 +60,10 @@ ul {
 
 
 
+
 /* Mobile */
 
 /* Header Section */
-
-header:not(.index header) {
-    background: black;
-}
 
 .topnav {
     display: none; 
@@ -161,7 +159,7 @@ label[for=hamburger-menu] {
 }
 
 .index_content {
-    margin-left: 40px;
+    margin-left: 10px;
     height: 100%;
 }
 
@@ -176,18 +174,14 @@ label[for=hamburger-menu] {
     color: var(--mainclr);
     text-transform: uppercase;
     font-size: 2rem;
+    letter-spacing: 0.18rem;
 }
 
 .index_content p {
     color: var(--secondclr);
     max-width: 450px;
-    margin: 10px;
+    margin: 10px 0;
     text-shadow: 0px 0px 5px #000;
-}
-
-.index_content h2,
-.index_content p {
-    margin-left: 20px;
 }
 
 
@@ -202,6 +196,7 @@ label[for=hamburger-menu] {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    letter-spacing: 0.1rem;
 }
 
 #btn-index:hover {
@@ -471,10 +466,7 @@ footer {
     text-align: center;
     color: var(--secondclr);
     text-transform: capitalize;
-}
-
-footer li {
-    padding: 5px 0;
+    padding: 40px 0;
 }
 
 footer hr {
@@ -504,13 +496,12 @@ footer div p:first-of-type {
     color: var(--secondclr);
 }
 
-.footer-nav {
-    margin-bottom: 30px;
+.footer-nav li {
+    font-size: 1rem;
 }
 
-.footer-nav li {
-    padding: 10px 0;
-    font-size: 1rem;
+.footer-nav li:first-of-type {
+    padding-top: 0;
 }
 
 
@@ -593,29 +584,54 @@ footer div p:first-of-type {
         display: none;
     }
 
+}
+
+
+@media (min-width:1000px) {
+    
     /* Footer Section */
 
     footer {
-        /* display: flex; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
 
     footer hr {
         display: none;
     }
 
+    .footer-nav li,
+    footer li {
+        font-size: 0.85rem;
+        padding: 2px 0;
+    }
+
+    .fab {
+        padding-left: 0;
+    }
+
+
+
+
     /* Index Page */
 
-    .index main {
-        padding: 200px 0 120px;
+    .index .content-container {
+        background: linear-gradient(to top, 
+        green -5%, black 3%, black 40%, transparent 90%, black 100%);
     }
 
     #btn-index {
-        left: 110px;
-        bottom: 40px;
+        left: 55px;
+        bottom: 0px;
+    }
+
+    .index main {
+        padding-top: 200px;
     }
 
     .index_content {
-        /* margin-left: 0; */
+        margin-left: 0;
     }
-
 }
