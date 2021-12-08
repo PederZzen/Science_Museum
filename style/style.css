@@ -24,8 +24,8 @@ body {
 .max-width {
     max-width: 1000px;
     position: relative;
-    margin: 0 auto;
     padding: 0 10px;
+    margin: 0 auto;
 }
 
 img {
@@ -56,8 +56,6 @@ a {
 ul {
     list-style-type: none;
 }
-
-
 
 
 /* Mobile */
@@ -138,12 +136,6 @@ label[for=hamburger-menu] {
 
 /* Index Page */
 
-.index{
-    background: url(../media/img/robot.jpg) no-repeat fixed 50% 20%;
-    background-size: cover;
-
-}
-
 .index main {
     padding: 350px 0 100px;
     position: relative;
@@ -153,31 +145,33 @@ label[for=hamburger-menu] {
     height: 100px;
 }
 
-.index .content-container {
+.index header,
+.index footer {
+    background: transparent;
+
+}
+
+.index {
     background: linear-gradient(to top, 
-    green -5%, black 3%, black 60%, transparent 95%, black 100%);
+    green -5%, black 3%, black 60%, transparent 95%, black 100%), url(../media/img/robot.jpg) no-repeat fixed 50% 50% ;
+    background-size: 150vh;
 }
 
-.index_content {
-    margin-left: 10px;
-    height: 100%;
-}
-
-.index_content h1 {
+.index h1 {
     color: var(--secondclr);
     text-transform: capitalize;
     text-shadow: 0px 0px 20px #FFFFFF;
     font-size: 1.5rem;
 }
 
-.index_content h2 {
+.index h2 {
     color: var(--mainclr);
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 0.18rem;
 }
 
-.index_content p {
+.index p {
     color: var(--secondclr);
     max-width: 450px;
     margin: 10px 0;
@@ -193,7 +187,7 @@ label[for=hamburger-menu] {
     text-transform: capitalize;
     box-shadow: 0px 0px 10px var(--mainclr);
     position: absolute;
-    bottom: 0;
+    bottom: -80px;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 0.1rem;
@@ -211,14 +205,10 @@ label[for=hamburger-menu] {
     background-position: top right;
 }
 
-.cards h2,
+.explore .cards h2,
 .exhibits h2 {
     font-size: 1.5rem;
     margin: 30px 0 30px;
-}
-
-.cards p {
-    max-width: 450px;
 }
 
 .cards img,
@@ -237,6 +227,16 @@ label[for=hamburger-menu] {
 .cards > section,
 .exhibits {
     position: relative;
+}
+
+.exhibits,
+.cards {
+    margin-bottom: 80px;
+}
+
+.exhibits div {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .date {
@@ -285,8 +285,8 @@ label[for=hamburger-menu] {
     font-size: 1rem; 
     position: absolute;
     font-weight: bolder;
-    top: 100px;
-    right: 0;
+    bottom: 10px;
+    left: 10px;
 }
 
 /* Visit Page */
@@ -297,10 +297,14 @@ label[for=hamburger-menu] {
 }
 
 .info-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background: var(--blackclr);
     color: var(--secondclr);
-    margin: 50px 10px;
     padding: 20px 15px;
+    max-width: 450px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -309,7 +313,7 @@ label[for=hamburger-menu] {
 }
 
 .info-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .info-card p {
@@ -337,8 +341,8 @@ label[for=hamburger-menu] {
     top: 4px;
 }
 
-.cards p {
-    margin: 20px 0;
+.visit .cards {
+    margin-top: 100px;
 }
 
 .visit main {
@@ -350,10 +354,6 @@ label[for=hamburger-menu] {
 .exhibitions-page .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions-small.jpg);
     background-position: top left;
-}
-
-.exhibitions-page .exhibits > div {
-    margin-bottom: 70px;
 }
 
 .exhibits a {
@@ -379,15 +379,24 @@ label[for=hamburger-menu] {
 }
 
 .get-involved h1 {
-    margin: 30px 0 20px 10px;
+    margin: 30px 0 20px;
     color: var(--blackclr);
     padding: 0;
+    font-size: 1.5rem;
+}
+
+.get-involved h2 {
+    font-size: 1rem;
 }
 
 .get-involved .hero p {
     color: var(--blackclr);
     padding: 0;
     margin-bottom: 50px;
+}
+
+.get-involved .cards p {
+    margin: 10px 0;
 }
 
 .get-involved .hero {
@@ -506,7 +515,6 @@ footer div p:first-of-type {
 
     .bg-gray {
         background: var(--secondclr);
-        margin: 50px 0 100px;
     }
 
     header {
@@ -599,10 +607,18 @@ footer div p:first-of-type {
     .exhibits {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 50px 0;
+        gap: 20px;
     }
 
+    /* Visit Page */
+
+
+    .info-card {
+        max-width: 250px;
+        position: absolute;
+        right: 12px;
+        top: -300px;
+    }
 }
 
 /* Desktop */
@@ -636,22 +652,13 @@ footer div p:first-of-type {
 
     /* Index Page */
 
-    .index .content-container {
-        background: linear-gradient(to top, 
-        green -5%, black 3%, black 40%, transparent 90%, black 100%);
-    }
 
     #btn-index {
-        left: 55px;
-        bottom: 0px;
+        left: 60px;
     }
 
     .index main {
         padding-top: 200px;
-    }
-
-    .index_content {
-        margin-left: 0;
     }
 
     
@@ -661,9 +668,14 @@ footer div p:first-of-type {
         display: inherit;
     }
 
+    .explore .cards section {
+        grid-template-columns: 1fr 2fr 60px;
+
+    }
+
     .cards section {
         display: grid;
-        grid-template-columns: 1fr 2fr 60px;
+        /* grid-template-columns: 1fr 2fr 60px; */
         gap: 10px;
         padding: 10px;
         background: var(--secondclr);
@@ -671,6 +683,19 @@ footer div p:first-of-type {
         max-width: 100%;
         margin: 20px 0;
         box-shadow: 0px 0px 5px var(--mainclr);
+    }
+
+    .cards--v2 section img {grid-area: img;}
+    .cards--v2 section div {grid-area: text;}
+
+    .cards--v2 section {
+        grid-template-columns: 30% 70%;
+        grid-template-areas: 'img text';
+    }
+
+    .cards--v2 section:nth-child(even) {
+        grid-template-columns: auto 30%;
+        grid-template-areas: 'text img';
     }
 
 }
