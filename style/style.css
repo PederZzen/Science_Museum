@@ -137,24 +137,26 @@ label[for=hamburger-menu] {
 /* Index Page */
 
 .index main {
-    padding: 350px 0 100px;
-    position: relative;
+    /* padding: 250px 0; */
+    /* position: relative; */
+}
+
+.index footer {
+    margin-top: -4px; /* Æsj gjør det bedre... værsåsnill! */
 }
 
 .index header {
-    height: 100px;
+    /* height: 100px; */
 }
 
-.index header,
-.index footer {
+.index header{
     background: transparent;
-
 }
 
-.index {
+.index .hero {
     background: linear-gradient(to top, 
-    green -5%, black 3%, black 60%, transparent 95%, black 100%), url(../media/img/robot.jpg) no-repeat fixed 50% 50%;
-    background-size: 150vh;
+    black 20%, transparent 95%, black 100%), url(../media/img/robot.jpg) fixed;
+    clip-path: none;
 }
 
 .index h1 {
@@ -162,6 +164,7 @@ label[for=hamburger-menu] {
     text-transform: capitalize;
     text-shadow: 0px 0px 20px #FFFFFF;
     font-size: 1.5rem;
+    padding-bottom: 0;
 }
 
 .index h2 {
@@ -171,10 +174,10 @@ label[for=hamburger-menu] {
     letter-spacing: 0.18rem;
 }
 
-.index p {
+.index .hero p {
     color: var(--secondclr);
     max-width: 450px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     text-shadow: 0px 0px 5px #000;
 }
 
@@ -187,7 +190,7 @@ label[for=hamburger-menu] {
     text-transform: capitalize;
     box-shadow: 0px 0px 10px var(--mainclr);
     position: absolute;
-    bottom: -80px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 0.1rem;
@@ -370,7 +373,7 @@ label[for=hamburger-menu] {
 
 .exhibitions-page .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions.jpg);
-    background-position: 0 35%;
+    background-position: center;
 }
 
 .exhibits a {
@@ -695,7 +698,7 @@ footer div p:first-of-type {
     }
 
     .index main {
-        padding-top: 200px;
+        /* padding: 200px 0; */
     }
 
     
