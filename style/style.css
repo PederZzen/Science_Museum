@@ -225,7 +225,7 @@ label[for=hamburger-menu] {
 
 .explore .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore.jpg);
-    background-position: top right;
+    background-position: 60% 0;
 }
 
 .explore .cards h2,
@@ -269,6 +269,10 @@ label[for=hamburger-menu] {
 .exhibits,
 .cards {
     margin-bottom: 80px;
+}
+
+.exhibits {
+    position: relative;
 }
 
 .exhibits div {
