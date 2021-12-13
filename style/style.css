@@ -18,7 +18,7 @@ body {
     background-color: var(--whiteclr);
     font-family: var(--typefont);
     min-width: 300px;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 .max-width {
@@ -42,6 +42,10 @@ h3 {
 
 h1 {
     font-size: 1.7rem;
+}
+
+p {
+    margin: 10px 0;
 }
 
 p,
@@ -132,6 +136,7 @@ label[for=hamburger-menu] {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     background-attachment: fixed;
     height: 70vh;
+    min-height: 500px;
 }
 
 .hero-content {
@@ -275,7 +280,7 @@ label[for=hamburger-menu] {
     position: relative;
 }
 
-.exhibits div {
+.exhibits {
     margin: 0 auto 30px;
     max-width: 450px;
 }
@@ -322,11 +327,15 @@ label[for=hamburger-menu] {
     font-size: 1rem;
 }
 
+.bg-gray div:last-of-type {
+    padding-bottom: 80px;
+}
+
 .cta-view-all {
     font-size: 1rem; 
     position: absolute;
     font-weight: bolder;
-    bottom: 10px;
+    bottom: 20px;
     left: 10px;
 }
 
@@ -470,10 +479,6 @@ label[for=hamburger-menu] {
     font-size: 1.2rem;
 }
 
-.cosmology .hero p {
-    padding-bottom: 150px;
-}
-
 .cosmology .hero h2 {
     color: var(--mainclr);
     font-size: 2rem;
@@ -494,15 +499,15 @@ label[for=hamburger-menu] {
     font-size: 1.4rem;
 }
 
-#cosmology-info > * {
-    margin: 15px 0;
+#cosmology-info {
+    margin: 100px 0 50px;
     max-width: 750px;
 }
 
 .exhibit-img {
     margin-bottom: 30px;
     display: grid;
-    gap: 10px;
+    gap: 20px;
 }
 
 .exhibit-img > * {
@@ -521,14 +526,6 @@ footer {
     padding: 40px 0;
 }
 
-footer hr {
-    width: 60%;
-    margin: 0 auto;
-    border: none;
-    height: 0.5px;
-    background-color: var(--secondclr);
-}
-
 .fab {
     font-size: 1.5rem;
     padding: 0 15px;
@@ -541,7 +538,7 @@ footer div {
 
 footer div p:first-of-type {
     font-size: 1.1rem;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .footer-nav a {
@@ -556,6 +553,29 @@ footer div p:first-of-type {
     padding-top: 0;
 }
 
+#map {
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+footer div {
+    position: relative;
+}
+
+footer div::after {
+    content: '';
+    background: var(--secondclr);
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer div:nth-child(1):after {
+    display: none;
+}
 
 /* Tablet */
 
@@ -682,6 +702,7 @@ footer div p:first-of-type {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        max-width: 1200px;
     }
 
     /* Cosmology Page */
@@ -726,10 +747,6 @@ footer div p:first-of-type {
         text-align: left;
     }
 
-    footer hr {
-        display: none;
-    }
-
     .footer-nav li,
     footer li {
         font-size: 0.85rem;
@@ -738,6 +755,15 @@ footer div p:first-of-type {
 
     .fab {
         padding-left: 0;
+    }
+
+    footer div:nth-child(1)::after {
+        display: inline-block;
+    }
+
+    footer div::after {
+        width: 100%;
+        top: 85px;
     }
 
     /* Explore Page */
@@ -774,9 +800,9 @@ footer div p:first-of-type {
     /* Visit Page */
     
     .visit .info-card {
-        max-width: 250px;
+        max-width: 15rem;
         position: absolute;
-        right: 0;
+        right: 10px;
         top: -300px;
     }
 
@@ -784,8 +810,9 @@ footer div p:first-of-type {
 
     .cosmology .info-card {
         position: absolute;
+        outline: 0.5px solid var(--secondclr);
         right: 14px;
-        top: -180px;
+        top: -280px;
         width: 400px;
     }
 
