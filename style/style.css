@@ -18,7 +18,7 @@ body {
     background-color: var(--whiteclr);
     font-family: var(--typefont);
     min-width: 300px;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .max-width {
@@ -56,6 +56,7 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--mainclr);
 }
 
 ul {
@@ -189,7 +190,7 @@ label[for=hamburger-menu] {
     color: var(--secondclr);
     text-transform: capitalize;
     text-shadow: 0px 0px 10px #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 0;
 }
 
@@ -240,8 +241,6 @@ label[for=hamburger-menu] {
     text-align: center;
 }
 
-
-
 .cards img,
 .exhibits img {
     max-height: 270px;
@@ -253,6 +252,10 @@ label[for=hamburger-menu] {
 .exhibits h3 {
     font-size: 1.2rem;
     padding: 10px 0;
+}
+
+.cards p {
+    max-width: 700px;
 }
 
 .cards section {
@@ -290,7 +293,6 @@ label[for=hamburger-menu] {
     color: var(--secondclr);
     padding: 10px;
     text-align: center;
-    font-size: 1rem;
     position: absolute;
     top: -15px;
     right: 10px;
@@ -324,7 +326,6 @@ label[for=hamburger-menu] {
     margin: 20px 0 30px;
     display: inline-block;
     position: relative;
-    font-size: 1rem;
 }
 
 .bg-gray div:last-of-type {
@@ -377,11 +378,6 @@ label[for=hamburger-menu] {
     padding-top: 15px;
 }
 
-.info-card a {
-    color: var(--mainclr);
-    text-decoration: none;
-}
-
 .info-card a:hover {
     text-decoration: underline;
 }
@@ -423,6 +419,7 @@ label[for=hamburger-menu] {
 
 .get-involved .hero {
     height: 20vh;
+    min-height: inherit;
 }
 
 .get-involved header::after {
@@ -445,7 +442,7 @@ label[for=hamburger-menu] {
 }
 
 .get-involved h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .get-involved .hero p {
@@ -543,10 +540,6 @@ footer div p:first-of-type {
 
 .footer-nav a {
     color: var(--secondclr);
-}
-
-.footer-nav li {
-    font-size: 1rem;
 }
 
 .footer-nav li:first-of-type {
@@ -747,10 +740,8 @@ footer div:nth-child(1):after {
         text-align: left;
     }
 
-    .footer-nav li,
     footer li {
-        font-size: 0.85rem;
-        padding: 2px 0;
+        padding: 5px 0;
     }
 
     .fab {
