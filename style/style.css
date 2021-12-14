@@ -5,23 +5,24 @@
 }
 
 :root {
-    --mainclr: #3FA652;
-    --secondclr: #F9F8F8;
-    --blackclr: #000;
-    --whiteclr: #fff;
+    --mainclr: #ffffff;
+    --secondclr: #000;
+    --accentclr: #3FA652;
+    --mainclr-dark: #f9f8f8;
 
-    --headerfont: 'audiowide',Montserrat, 'Helvetica';
+    --accentfont: 'audiowide',Montserrat, 'Helvetica';
     --typefont:'Montserrat', sans-serif, 'open sans';
 }
 
 body {
-    background-color: var(--whiteclr);
+    background-color: var(--mainclr);
     font-family: var(--typefont);
     min-width: 300px;
     font-size: 0.85rem;
+    font-display: swap;
 }
 
-.max-width {
+.max-width { /* Container for everything that needs a max width */
     max-width: 1200px;
     padding: 0 10px;
     margin: 0 auto;
@@ -35,8 +36,9 @@ img {
 
 h1,
 h2,
-h3 {
-    font-family: var(--headerfont);
+h3,
+h4 {
+    font-family: var(--accentfont);
     font-weight: normal;
 }
 
@@ -56,7 +58,7 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--mainclr);
+    color: var(--accentclr);
 }
 
 ul {
@@ -64,17 +66,14 @@ ul {
 }
 
 .bg-gray {
-    background: var(--secondclr);
+    background: var(--mainclr-dark);
 }
 
 
 /* Mobile */
 
-/* Navigation */
+/* Header Style */
 
-header .max-width {
-    padding: 0;
-}
 
 header,
 footer {
@@ -84,6 +83,9 @@ footer {
 .logo {
     display: inline-block;
 }
+
+/* Navigation Style */
+
 
 .topnav {
     display: none; 
@@ -104,7 +106,6 @@ label[for=hamburger-menu] {
     cursor: pointer;
 }
 
-
 .topnav ul {
     position: absolute;
     right: 10px;
@@ -112,25 +113,23 @@ label[for=hamburger-menu] {
     border-radius: 5px;
     overflow: hidden;
     z-index: 100;
-    
 }
 
 .topnav a {
     text-transform: capitalize;
-    color: var(--mainclr);
     font-size: 1.5rem;
     padding: 20px 60px 20px 10px;
     display: block;
 }
 
 .topnav a:hover {
-    background-color: var(--mainclr);
-    color: var(--blackclr);
+    background-color: var(--accentclr);
+    color: var(--secondclr);
     opacity: 0.8;
-    box-shadow: 0px 0px 15px var(--mainclr);
+    box-shadow: 0px 0px 15px var(--accentclr);
 }
 
-/* Hero Section */
+/* Hero Style */
 
 .hero {
     background-size: cover;
@@ -146,7 +145,7 @@ label[for=hamburger-menu] {
 }
 
 .hero h1 {
-    color: var(--mainclr);
+    color: var(--accentclr);
 }
 
 .hero p {
@@ -173,6 +172,56 @@ label[for=hamburger-menu] {
     padding: 0 5px;
 }
 
+/* Footer */
+
+footer {
+    text-align: center;
+    color: var(--mainclr);
+    text-transform: capitalize;
+    padding: 40px 0;
+}
+
+.fab {
+    font-size: 1.5rem;
+    padding: 0 15px;
+} 
+
+footer div {
+    padding: 50px 0;
+
+}
+
+footer div p:first-of-type {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: var(--mainclr);
+}
+
+.footer-nav li:first-of-type {
+    padding-top: 0;
+}
+
+footer div {
+    position: relative;
+}
+
+footer div::after {
+    content: '';
+    background: var(--mainclr);
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer div:nth-child(1):after {
+    display: none;
+}
 
 /* Index Page */
 
@@ -185,14 +234,6 @@ label[for=hamburger-menu] {
     top: 50vh;
 }
 
-.index footer {
-    margin-top: -4px; /* Æsj gjør det bedre... værsåsnill! */
-}
-
-.index header{
-    background: transparent;
-}
-
 .index .hero {
     clip-path: none;
     background-position: right;
@@ -202,7 +243,7 @@ label[for=hamburger-menu] {
 }
 
 .index h1 {
-    color: var(--secondclr);
+    color: var(--mainclr);
     text-transform: capitalize;
     text-shadow: 0px 0px 10px #FFFFFF;
     font-size: 1.4rem;
@@ -210,14 +251,14 @@ label[for=hamburger-menu] {
 }
 
 .index h2 {
-    color: var(--mainclr);
+    color: var(--accentclr);
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 0.18rem;
 }
 
 .index .hero p {
-    color: var(--secondclr);
+    color: var(--mainclr);
     max-width: 450px;
     text-shadow: 0px 0px 5px #000;
 }
@@ -225,12 +266,12 @@ label[for=hamburger-menu] {
 
 #btn-index {
     background-color: transparent;
-    color: var(--secondclr);
-    border: 1px solid var(--mainclr);
+    color: var(--mainclr);
+    border: 1px solid var(--accentclr);
     padding: 10px 20px;
     text-transform: capitalize;
-    box-shadow: 0px 0px 5px var(--mainclr);
-    text-shadow: 0px 0px 5px var(--whiteclr);
+    box-shadow: 0px 0px 5px var(--accentclr);
+    text-shadow: 0px 0px 5px var(--mainclr);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -240,8 +281,13 @@ label[for=hamburger-menu] {
 }
 
 #btn-index:hover {
-    box-shadow: 0px 0px 25px var(--mainclr);
+    box-shadow: 0px 0px 25px var(--accentclr);
 }
+
+.index footer {
+    margin-top: -4px;
+}
+
 
 /* Explore Page */
 
@@ -275,14 +321,13 @@ label[for=hamburger-menu] {
 }
 
 .cards section {
-    background: var(--secondclr);
+    background: var(--mainclr-dark);
     border: 1px solid #ddd;
 }
 
 .cards section > * {
     padding: 5px;
 }
-
 
 .cards section {
     position: relative;
@@ -296,17 +341,13 @@ label[for=hamburger-menu] {
 }
 
 .exhibits {
+    max-width: 450px;
     position: relative;
 }
 
-.exhibits {
-    margin: 0 auto 30px;
-    max-width: 450px;
-}
-
 .date {
-    background: var(--blackclr);
-    color: var(--secondclr);
+    background: var(--secondclr);
+    color: var(--mainclr);
     padding: 10px;
     text-align: center;
     position: absolute;
@@ -318,7 +359,7 @@ label[for=hamburger-menu] {
 .backdrop::before {
     content: '';
     position: absolute;
-    background: var(--mainclr);
+    background: var(--accentclr);
 }
 
 .backdrop::after{
@@ -336,8 +377,8 @@ label[for=hamburger-menu] {
 }
 
 .exhibits .backdrop {
-    background: var(--blackclr);
-    color: var(--secondclr);
+    background: var(--secondclr);
+    color: var(--mainclr);
     padding: 5px 10px;
     margin: 20px 0 30px;
     display: inline-block;
@@ -378,8 +419,8 @@ label[for=hamburger-menu] {
 }
 
 .info-card {
-    background: var(--blackclr);
-    color: var(--secondclr);
+    background: var(--secondclr);
+    color: var(--mainclr);
 }
 
 .info-card ul {
@@ -441,7 +482,7 @@ label[for=hamburger-menu] {
 .get-involved header::after {
     content: '';
     position: absolute;
-    background-color: var(--mainclr);
+    background-color: var(--accentclr);
     height: 20px;
     width: 100%;
     bottom: -5px;
@@ -452,7 +493,7 @@ label[for=hamburger-menu] {
 
 .get-involved h1 {
     margin: 30px 0 20px;
-    color: var(--blackclr);
+    color: var(--secondclr);
     padding: 0;
     font-size: 1.5rem;
 }
@@ -462,8 +503,7 @@ label[for=hamburger-menu] {
 }
 
 .get-involved .hero p {
-    color: var(--blackclr);
-    padding: 0;
+    color: var(--secondclr);
 }
 
 .get-involved .cards p {
@@ -491,13 +531,13 @@ label[for=hamburger-menu] {
 }
 
 .cosmology .hero h1 {
-    color: var(--secondclr);
+    color: var(--mainclr);
     padding-bottom: 0;
     font-size: 1.2rem;
 }
 
 .cosmology .hero h2 {
-    color: var(--mainclr);
+    color: var(--accentclr);
     font-size: 2rem;
 }
 
@@ -534,72 +574,11 @@ label[for=hamburger-menu] {
     object-position: center;
 }
 
-/* Footer */
-
-footer {
-    text-align: center;
-    color: var(--secondclr);
-    text-transform: capitalize;
-    padding: 40px 0;
-}
-
-.fab {
-    font-size: 1.5rem;
-    padding: 0 15px;
-} 
-
-footer div {
-    padding: 50px 0;
-
-}
-
-footer div p:first-of-type {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-.footer-nav a {
-    color: var(--secondclr);
-}
-
-.footer-nav li:first-of-type {
-    padding-top: 0;
-}
-
-#map {
-    max-width: 200px;
-    margin: 10px auto;
-}
-
-footer div {
-    position: relative;
-}
-
-footer div::after {
-    content: '';
-    background: var(--secondclr);
-    width: 70%;
-    height: 1px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-footer div:nth-child(1):after {
-    display: none;
-}
-
-
 /* Tablet */
 
 @media (min-width: 750px) {
-
-    /* Navigation */
-
-    header {
-        position: relative;
-    }
+    
+    /* Navigation Styles */
     
     .topnav {
         display: block; 
@@ -616,13 +595,13 @@ footer div:nth-child(1):after {
 
     .topnav a:hover {
         background: none;
-        color: var(--mainclr);
+        color: var(--accentclr);
         box-shadow: none;
         opacity: 1;
     }
 
     .topnav li:hover {
-        color: var(--secondclr);
+        color: var(--mainclr);
     }
 
     .topnav a {
@@ -637,7 +616,7 @@ footer div:nth-child(1):after {
         height: 1px;
         left: 0;
         bottom: -2px;
-        background: var(--mainclr);
+        background: var(--accentclr);
         position: absolute;
 
         transform: scaleX(0);
@@ -666,7 +645,6 @@ footer div:nth-child(1):after {
         display: none;
     }
 
-
     /* Index Page */
 
     .index-content {
@@ -682,7 +660,6 @@ footer div:nth-child(1):after {
     #btn-index {
         left: 60px;
     }
-
 
     /* Explore Page */
 
@@ -733,14 +710,14 @@ footer div:nth-child(1):after {
 
 @media (min-width:1000px) {
 
-    /* Hero Section */
+    /* Hero Style */
 
     .hero-content {
         position: relative;
         top: 30vh;
     }
     
-    /* Footer Section */
+    /* Footer Style */
 
     footer .max-width{
         display: flex;
@@ -810,7 +787,7 @@ footer div:nth-child(1):after {
 
     .cosmology .info-card {
         position: absolute;
-        outline: 0.5px solid var(--secondclr);
+        outline: 0.5px solid var(--mainclr);
         right: 14px;
         top: -280px;
         width: 400px;
