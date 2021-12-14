@@ -19,10 +19,9 @@ body {
     font-family: var(--typefont);
     min-width: 300px;
     font-size: 0.85rem;
-    font-display: swap;
 }
 
-.max-width { /* Container for everything that needs a max width */
+.max-width { 
     max-width: 1200px;
     padding: 0 10px;
     margin: 0 auto;
