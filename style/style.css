@@ -290,10 +290,10 @@ footer div:nth-child(1):after {
 
 /* Explore Page */
 
-.explore .hero {
+/* .explore .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore.jpg);
     background-position: 60% 0;
-}
+} */
 
 .explore .cards h2,
 .exhibits h2 {
