@@ -295,7 +295,7 @@ footer div:nth-child(1):after {
 /* Explore Page */
 
 .explore .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../media/img/hero-explore.webp);
     background-position: 60% 0;
 }
 
@@ -403,7 +403,7 @@ footer div:nth-child(1):after {
 /* Visit Page */
 
 .visit .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-visit-small.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-visit-small.webp);
     background-position: top left;
 }
 
@@ -463,7 +463,7 @@ footer div:nth-child(1):after {
 /* Exhibitions Page */
 
 .exhibitions-page .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions.webp);
     background-position: 35%;
 }
 
@@ -528,7 +528,7 @@ footer div:nth-child(1):after {
 /* Cosmology Exhibition Page */
 
 .cosmology .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-cosmology.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-cosmology.webp);
     background-position: center;
     position: relative;
 }
