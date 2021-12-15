@@ -74,10 +74,14 @@ ul {
 /* Header Style */
 
 
-header,
-footer {
+header {
     background: black;
 }
+
+footer {
+    background-image: linear-gradient(-2deg, green, black 2%);
+}
+
 
 .logo {
     display: inline-block;
@@ -642,6 +646,12 @@ footer div:nth-child(1):after {
     
     label[for=hamburger-menu] { 
         display: none;
+    }
+
+    /* Footer Style */
+
+    footer {
+        background-image: linear-gradient(-2deg, green, black 5%);
     }
 
     /* Index Page */
