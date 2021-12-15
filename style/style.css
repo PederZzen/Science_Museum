@@ -239,9 +239,9 @@ footer div:nth-child(1):after {
 
 .index .hero {
     clip-path: none;
-    background-position: right;
+    background-position: top right;
     background-image: linear-gradient(to top, 
-    black 20%, transparent 95%, black 100%), url(../media/img/robot.webp);
+    black 20%, transparent 95%, black 100%), url(../media/img/robot-small.webp);
     background-attachment: scroll, fixed;
 }
 
