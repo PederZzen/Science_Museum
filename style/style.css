@@ -137,7 +137,6 @@ label[for=hamburger-menu] {
 .hero {
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-    background-attachment: fixed;
     height: 70vh;
     width: 100%;
     min-height: 500px;
@@ -243,7 +242,7 @@ footer div:nth-child(1):after {
     background-position: top right;
     background-image: linear-gradient(to top, 
     black 20%, transparent 95%, black 100%), url(../media/img/robot-small.webp);
-    background-attachment: scroll, fixed;
+    background-attachment: scroll;
 }
 
 .index h1 {
@@ -649,6 +648,12 @@ footer div:nth-child(1):after {
         display: none;
     }
 
+    /* Hero Style */
+
+    .hero {
+        background-attachment: fixed;
+    }
+
     /* Footer Style */
 
     footer {
@@ -656,6 +661,10 @@ footer div:nth-child(1):after {
     }
 
     /* Index Page */
+
+    .index .hero {
+        background-attachment: scroll, fixed;
+    }
 
     .index-content {
         top: 40vh;
