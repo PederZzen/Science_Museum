@@ -135,7 +135,7 @@ label[for=hamburger-menu] {
 /* Hero Style */
 
 .hero {
-    background-size: cover;
+    background-size: cover !important;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     background-attachment: fixed;
     height: 70vh;
