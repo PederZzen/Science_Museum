@@ -241,7 +241,7 @@ footer div:nth-child(1):after {
     clip-path: none;
     background-position: right;
     background-image: linear-gradient(to top, 
-    black 20%, transparent 95%, black 100%), url(../media/img/robot-small.jpg);
+    black 20%, transparent 95%, black 100%), url(../media/img/robot.webp);
     background-attachment: scroll, fixed;
 }
 
@@ -662,7 +662,7 @@ footer div:nth-child(1):after {
 
     .index .hero {
         background-image: linear-gradient(to top, 
-        black 5%, transparent 80%, black 100%), url(../media/img/robot.jpg);
+        black 5%, transparent 80%, black 100%), url(../media/img/robot.webp);
         background-position: 40% 25%;
     }
 
