@@ -528,7 +528,7 @@ footer div:nth-child(1):after {
 /* Cosmology Exhibition Page */
 
 .cosmology .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-cosmology.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-cosmology-small.webp);
     background-position: center;
     position: relative;
 }
@@ -704,6 +704,10 @@ footer div:nth-child(1):after {
     }
 
     /* Cosmology Page */
+
+    .cosmology .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-cosmology.webp);
+    }
     
     .exhibit-img {
         grid-template-columns: repeat(2, 1fr);
