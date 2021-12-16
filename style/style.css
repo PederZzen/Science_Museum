@@ -9,6 +9,7 @@
     --secondclr: #000;
     --accentclr: #3FA652;
     --mainclr-dark: #f9f8f8;
+    --detailclr: #00ff15;
 
     --accentfont: 'audiowide',Montserrat, 'Helvetica';
     --typefont:'Montserrat', sans-serif, 'open sans';
@@ -130,6 +131,10 @@ label[for=hamburger-menu] {
     color: var(--secondclr);
     opacity: 0.8;
     box-shadow: 0px 0px 15px var(--accentclr);
+}
+
+.active {
+    color: #9dffaf;
 }
 
 /* Hero Style */
@@ -266,14 +271,13 @@ footer div:nth-child(1):after {
     text-shadow: 0px 0px 5px #000;
 }
 
-
 #btn-index {
     background-color: transparent;
     color: var(--mainclr);
-    border: 1px solid var(--accentclr);
+    border: 1px solid var(--detailclr);
     padding: 10px 20px;
     text-transform: capitalize;
-    box-shadow: 0px 0px 5px var(--accentclr);
+    box-shadow: 0px 0px 5px var(--detailclr);
     text-shadow: 0px 0px 5px var(--mainclr);
     position: absolute;
     bottom: 0;
@@ -284,7 +288,7 @@ footer div:nth-child(1):after {
 }
 
 #btn-index:hover {
-    box-shadow: 0px 0px 25px var(--accentclr);
+    box-shadow: 0px 0px 20px var(--detailclr);
 }
 
 .index footer {
@@ -346,6 +350,7 @@ footer div:nth-child(1):after {
 .exhibits {
     max-width: 450px;
     position: relative;
+    padding-top: 10px;
 }
 
 .date {
@@ -403,7 +408,7 @@ footer div:nth-child(1):after {
 /* Visit Page */
 
 .visit .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-visit-small.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-visit.webp);
     background-position: top left;
 }
 
@@ -464,7 +469,7 @@ footer div:nth-child(1):after {
 
 .exhibitions-page .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../media/img/hero-exhibitions.webp);
-    background-position: 35%;
+    background-position: 20% 10%;
 }
 
 .exhibits a {
